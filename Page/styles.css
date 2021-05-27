@@ -1,0 +1,17 @@
+.header {
+    height: 10vh;
+    text-align: center;
+}
+
+.parent {
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.child {
+    border: 1vh;
+    margin-left: 1%;
+    width: 50%;
+    background-color: #f2f2f2;
+}

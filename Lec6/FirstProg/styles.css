@@ -1,0 +1,12 @@
+/* element selector */
+
+body {
+    background-color: grey;
+}
+
+
+/* class selector */
+
+.heading {
+    color: white;
+}
