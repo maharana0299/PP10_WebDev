@@ -78,38 +78,81 @@ async function fillForm(obj, data) {
     try {
         let newPage = await browser.newPage();
         await newPage.goto(obj.url);
-        await newPage.waitForNavigation();
 
-        await newPage.waitForSelector('.freebirdFormviewerComponentsQuestionBaseRoot input');
+        await newPage.waitForSelector('.freebirdFormviewerComponentsQuestionBaseRoot');
 
-        // need to optimize this
-        const elementHandle = await newPage.$$('.freebirdFormviewerComponentsQuestionBaseRoot input');
+        const elementHandles = await newPage.$$('.freebirdFormviewerComponentsQuestionBaseRoot');
 
-        // getting type
-        const attr = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot input', el => el.map(x => x.getAttribute("type")));
-        console.log(attr);
-        // getting text name 
-        const feild = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot .freebirdFormviewerComponentsQuestionBaseHeader',
-            el => el.map(x => x.innerText));
-        console.log(feild);
+        // here we have got all the elements
+        console.log(elementHandles.length);
 
-        for (let i = 0; i < elementHandle.length; i++) {
+        for (let i = 0; i < elementHandles.length; i++) {
+            // get names of the tag
+            let name = await elementHandles[i].$eval('.freebirdFormviewerComponentsQuestionBaseHeader', x => x.innerText);
 
-            if (feild[i].includes('Name') && attr[i] == 'text') {
-                await elementHandle[i].type(data.name);
-            } else if (feild[i].includes('nrollment') && attr[i] == 'text') {
-                await elementHandle[i].type(data.enroll);
-            } else if (feild[i].includes('mail') && attr[i] == 'text') {
-                await elementHandle[i].type(data.email);
-            } else if (feild[i].includes('lass') && attr[i] == 'text') {
-                await elementHandle[i].type(data.class);
+            let input = await elementHandles[i].$('input ');
+            let radio = await elementHandles[i].$('.freebirdFormviewerViewItemsRadiogroupRadioGroup')
+            let dropDown = await elementHandles[i].$('.quantumWizMenuPaperselectOptionList');
+            if (radio) {
+                // .freebirdFormviewerComponentsQuestionRadioChoice
+                console.log('radio ' + name);
+            } else if (dropDown) {
+                // quantumWizMenuPaperselectContent exportContent
+                console.log('drop down' + name);
+                // await dropDown.focus('.quantumWizMenuPaperselectOptionList');
+                await dropDown.click();
+
+                // await newPage.keyboard.press('Tab');
+                await newPage.keyboard.press('Enter');
+
+                // let times = data.class.trim().charAt(data.class.length - 1);
+                // times = Number(times);
+                // console.log(times);
+                // // for (let j = 0; j < times; j++) {
+                await newPage.keyboard.press('ArrowDown');
+                await newPage.keyboard.press('ArrowDown');
+                // // }
+                await newPage.keyboard.press('Enter');
+            } else if (input) {
+                name = name.toLowerCase();
+
+
+                // if (name.includes('name')) {
+                //     await input.type(data.name);
+                // } else if (name.includes('email')) {
+                //     await input.type(data.email);
+                // } else if (name.includes('enroll')) {
+                //     await input.type(data.enroll);
+                // } else if (name.includes('class')) {
+                //     await input.type(data.class);
+                // }
+                console.log('input ' + name);
             }
+            // console.log(name);
         }
+        // // need to optimize this
+        // const elementHandle = await newPage.$$('.freebirdFormviewerComponentsQuestionBaseRoot input');
 
+        // // getting type
+        // const attr = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot input', el => el.map(x => x.getAttribute("type")));
+        // console.log(attr);
+        // // getting text name 
+        // const feild = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot .freebirdFormviewerComponentsQuestionBaseHeader',
+        //     el => el.map(x => x.innerText));
+        // console.log(feild);
 
-        // const ele = await newPage.waitForSelector('.freebirdFormviewerComponentsQuestionBaseRoot input');
-        // await ele.type('.freebirdFormviewerComponentsQuestionBaseRoot input', "nifjnlksjf");
-        // console.log(ele);
+        // for (let i = 0; i < elementHandle.length; i++) {
+
+        //     if (feild[i].includes('Name') && attr[i] == 'text') {
+        //         await elementHandle[i].type(data.name);
+        //     } else if (feild[i].includes('nrollment') && attr[i] == 'text') {
+        //         await elementHandle[i].type(data.enroll);
+        //     } else if (feild[i].includes('mail') && attr[i] == 'text') {
+        //         await elementHandle[i].type(data.email);
+        //     } else if (feild[i].includes('lass') && attr[i] == 'text') {
+        //         await elementHandle[i].type(data.class);
+        //     }
+        // }
 
 
     } catch (e) {
