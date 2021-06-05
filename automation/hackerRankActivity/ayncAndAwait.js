@@ -1,6 +1,10 @@
 let { email, password } = require('./creds.js');
 const pup = require('puppeteer');
 
+/**
+ * Hackerrank complete sutomation
+ * Sumbits all questions of practice session 
+ */
 async function hack() {
 
     try {
