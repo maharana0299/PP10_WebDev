@@ -11,6 +11,7 @@ var data = {
     class: 'CSE-2',
     enroll: '40413202718',
     email: "nirbhay0299@gmail.com",
+    section: 2,
 }
 async function start({ metting_id }) {
 
@@ -21,7 +22,8 @@ async function start({ metting_id }) {
         browser = await puppeteer.launch({
             headless: false,
             args: ["--disable-notifications", "--mute-audio", "--enable-automation", '--start-maximized'],
-            ignoreDefaultArgs: true
+            ignoreDefaultArgs: true,
+            slowmo: 50,
         });
 
         await fillForm({ url: 'https://docs.google.com/forms/d/e/1FAIpQLSf5a3KjIyUERQgtg1GZIwnao_GZ9yBQxOboHAL6XH37UXqyxQ/viewform' }, data)
@@ -93,67 +95,60 @@ async function fillForm(obj, data) {
             let input = await elementHandles[i].$('input ');
             let radio = await elementHandles[i].$('.freebirdFormviewerViewItemsRadiogroupRadioGroup')
             let dropDown = await elementHandles[i].$('.quantumWizMenuPaperselectOptionList');
+            await newPage.waitForTimeout(1000);
+            name = name.toLowerCase();
             if (radio) {
                 // .freebirdFormviewerComponentsQuestionRadioChoice
                 console.log('radio ' + name);
+
+                // let radioOptions = await radio.$$('.freebirdFormviewerComponentsQuestionRadioChoice');
+                // console.log(radioOptions[0]);
+                await newPage.waitForSelector('.freebirdFormviewerComponentsQuestionRadioChoice');
+                await newPage.waitForTimeout(1000);
+                // todo
+                let n = await elementHandles[i].$$('.freebirdFormviewerComponentsQuestionRadioChoice');
+                console.log(n.length);
+                await n[1].click()
             } else if (dropDown) {
                 // quantumWizMenuPaperselectContent exportContent
-                console.log('drop down' + name);
-                // await dropDown.focus('.quantumWizMenuPaperselectOptionList');
-                await dropDown.click();
-
-                // await newPage.keyboard.press('Tab');
-                await newPage.keyboard.press('Enter');
-
-                // let times = data.class.trim().charAt(data.class.length - 1);
-                // times = Number(times);
-                // console.log(times);
-                // // for (let j = 0; j < times; j++) {
-                await newPage.keyboard.press('ArrowDown');
-                await newPage.keyboard.press('ArrowDown');
-                // // }
-                await newPage.keyboard.press('Enter');
+                console.log("Dropdown");
+                console.log(name);
+                if (name.includes('class'))
+                    await fillDropDownClass(elementHandles[i]);
             } else if (input) {
-                name = name.toLowerCase();
 
 
-                // if (name.includes('name')) {
-                //     await input.type(data.name);
-                // } else if (name.includes('email')) {
-                //     await input.type(data.email);
-                // } else if (name.includes('enroll')) {
-                //     await input.type(data.enroll);
-                // } else if (name.includes('class')) {
-                //     await input.type(data.class);
-                // }
+                if (name.includes('name')) {
+                    await input.type(data.name);
+                } else if (name.includes('email')) {
+                    await input.type(data.email);
+                } else if (name.includes('enroll')) {
+                    await input.type(data.enroll);
+                } else if (name.includes('class')) {
+                    await input.type(data.class);
+                }
                 console.log('input ' + name);
             }
             // console.log(name);
         }
-        // // need to optimize this
-        // const elementHandle = await newPage.$$('.freebirdFormviewerComponentsQuestionBaseRoot input');
 
-        // // getting type
-        // const attr = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot input', el => el.map(x => x.getAttribute("type")));
-        // console.log(attr);
-        // // getting text name 
-        // const feild = await newPage.$$eval('.freebirdFormviewerComponentsQuestionBaseRoot .freebirdFormviewerComponentsQuestionBaseHeader',
-        //     el => el.map(x => x.innerText));
-        // console.log(feild);
+        async function fillDropDownClass(ele) {
 
-        // for (let i = 0; i < elementHandle.length; i++) {
 
-        //     if (feild[i].includes('Name') && attr[i] == 'text') {
-        //         await elementHandle[i].type(data.name);
-        //     } else if (feild[i].includes('nrollment') && attr[i] == 'text') {
-        //         await elementHandle[i].type(data.enroll);
-        //     } else if (feild[i].includes('mail') && attr[i] == 'text') {
-        //         await elementHandle[i].type(data.email);
-        //     } else if (feild[i].includes('lass') && attr[i] == 'text') {
-        //         await elementHandle[i].type(data.class);
-        //     }
-        // }
+            let a = await ele.$('.quantumWizMenuPaperselectContent');
+            await newPage.waitForTimeout(1000);
+            a.click();
+            await newPage.waitForTimeout(1000);
 
+            let allDropDowns = await ele.$$('.quantumWizMenuPaperselectOption[role="option"]');
+            for (let i = 0; i < allDropDowns.length; i++) {
+                let text = await allDropDowns[i].$eval('.quantumWizMenuPaperselectContent', x => x.innerText);
+                if (text.includes(data.section)) {
+                    await newPage.waitForTimeout(1000);
+                    await allDropDowns[i].click();
+                }
+            }
+        }
 
     } catch (e) {
         console.log(e);
