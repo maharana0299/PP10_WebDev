@@ -2,7 +2,8 @@ const puppeteer = require('puppeteer');
 
 
 
-// when we open any webpage, if any ad's come, we will close it
+// how much we have spent most on ?
+
 async function bandData(url) {
     try {
         const browser = await puppeteer.launch({
@@ -28,9 +29,7 @@ async function bandData(url) {
 
         // now extract data
 
-        await page.evaluate(() => {
-
-        });
+        let maxSpent = await page.evaluate(() => {});
     } catch (e) {
         console.log(e);
     }
