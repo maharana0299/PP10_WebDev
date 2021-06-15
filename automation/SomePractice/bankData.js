@@ -17,7 +17,20 @@ async function bandData(url) {
         await page.goto(url);
         console.log('Going to url....');
 
+        await page.waitForSelector('.form-group input');
 
+        await page.type('#username', 'username');
+        await page.type('#password', 'password');
+
+        await Promise.all([page.click('#log-in'), page.waitForNavigation()]);
+
+        await page.waitForSelector('table');
+
+        // now extract data
+
+        await page.evaluate(() => {
+
+        });
     } catch (e) {
         console.log(e);
     }
@@ -25,5 +38,5 @@ async function bandData(url) {
     // await browser.close();
 }
 
-let url = 'http://the-internet.herokuapp.com';
+let url = 'https://demo.applitools.com';
 bandData(url);
