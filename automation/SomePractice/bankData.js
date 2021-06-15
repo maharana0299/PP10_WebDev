@@ -29,7 +29,11 @@ async function bandData(url) {
 
         // now extract data
 
-        let maxSpent = await page.evaluate(() => {});
+        let maxSpent = await page.evaluate(() => {
+
+        });
+
+        console.log(maxSpent);
     } catch (e) {
         console.log(e);
     }
