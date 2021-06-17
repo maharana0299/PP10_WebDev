@@ -2,10 +2,11 @@ const puppeteer = require("puppeteer");
 const fs = require('fs');
 let data = {};
 
+let browser;
 
 async function automation(githubLink) {
     try {
-        const browser = await puppeteer.launch({
+        browser = await puppeteer.launch({
             headless: true,
             slowMo: 100, // for slowing a bit 
             defaultViewport: null, // null the default viewport 
@@ -15,8 +16,6 @@ async function automation(githubLink) {
         let page = (await browser.pages())[0];
         page.goto(githubLink);
         console.log('Automation Started....');
-
-        console.log('Getting topic');
 
         await page.waitForSelector('p.lh-condensed');
 
@@ -36,6 +35,7 @@ async function automation(githubLink) {
             await newPage.goto(projectUrl);
 
             await newPage.waitForSelector('.lh-condensed a.text-bold');
+            console.log('Working On Projects....');
             let allProjects = await newPage.evaluate(() => {
                 let topics = document.querySelectorAll('.lh-condensed a.text-bold');
                 let allProjects = [];
@@ -69,7 +69,7 @@ async function automation(githubLink) {
 
         async function addIssuesToData(newPage, topic, project, issueUrl) {
             await newPage.goto(issueUrl);
-
+            console.log('Adding Issue');
             try {
                 await newPage.waitForSelector('.h4.markdown-title');
                 let issues = await newPage.evaluate(() => {
@@ -98,6 +98,8 @@ async function automation(githubLink) {
 }
 
 async function getTopics(page) {
+
+    console.log('Getting Topics....');
     return await page.evaluate(() => {
         let topics = document.querySelectorAll('.topic-box');
         topicsLink = [];
