@@ -1,1 +1,368 @@
-{"scikit-learn":{"100-Days-Of-ML-Code":{"url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code","issues":[{"issue":"Fixed depreciated library calls that give errors.","url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code/pull/91"},{"issue":"Update Day 11 K-NN.md","url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code/pull/90"},{"issue":"Update Day2_Simple_Linear_Regression.md , used python oops concept and other basic libraries.","url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code/pull/89"},{"issue":"Update Day 1_Data PreProcessing.md","url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code/pull/87"},{"issue":"Added some changes in Readme file","url":"https://github.com/Avik-Jain/100-Days-Of-ML-Code/pull/86"}]},"AiLearning":{"url":"https://github.com/apachecn/AiLearning","issues":[{"issue":"关于“片刻” B站录制 “自然语言处理”的文档内容，下载地址问题！","url":"https://github.com/apachecn/AiLearning/issues/622"},{"issue":"贡献者","url":"https://github.com/apachecn/AiLearning/issues/595"},{"issue":"Python3","url":"https://github.com/apachecn/AiLearning/issues/593"},{"issue":"数据集下载地址","url":"https://github.com/apachecn/AiLearning/issues/580"},{"issue":"逻辑回归weighs的推倒","url":"https://github.com/apachecn/AiLearning/issues/552"}]},"PythonDataScienceHandbook":{"url":"https://github.com/jakevdp/PythonDataScienceHandbook","issues":[{"issue":"Pip subprocess error: Command \"python setup.py egg_info\" failed with error code 1 in /tmp/pip-install-qwas2iyk/matplotlib/","url":"https://github.com/jakevdp/PythonDataScienceHandbook/issues/303"},{"issue":"I am new in Python Data Science. I have the error as follows: ParserError: Error tokenizing data. C error: Expected 1 fields in line 12, saw 2 . How to resolve this?","url":"https://github.com/jakevdp/PythonDataScienceHandbook/issues/295"},{"issue":"ImportError: cannot import name 'RandomizedPCA' for 05.07-Support-Vector-Machines.ipynb","url":"https://github.com/jakevdp/PythonDataScienceHandbook/issues/293"},{"issue":"DS","url":"https://github.com/jakevdp/PythonDataScienceHandbook/issues/292"},{"issue":"Update Matplotlib formatters/tickers","url":"https://github.com/jakevdp/PythonDataScienceHandbook/issues/284"}]},"handson-ml":{"url":"https://github.com/ageron/handson-ml","issues":[{"issue":"Splitting with hashlib","url":"https://github.com/ageron/handson-ml/issues/628"},{"issue":"using column indices in the Custom Transformer","url":"https://github.com/ageron/handson-ml/issues/615"},{"issue":"Creating a test set with a hash (Issue 71 was closed)","url":"https://github.com/ageron/handson-ml/issues/613"},{"issue":"got an error while opening notebook Unreadable Notebook: C:\\requestshtml\\envdeepl\\02_end_to_end_machine_learning_project.ipynb NotJSONError(\"Notebook does not appear to be JSON: '\\\\n\\\\n\\\\n\\\\n\\\\n\\\\n<!DOCTYPE html>\\\\n<html lang...\",)","url":"https://github.com/ageron/handson-ml/issues/611"},{"issue":"Ch3: Implementing Cross-Validation","url":"https://github.com/ageron/handson-ml/issues/605"}]},"data-science-ipython-notebooks":{"url":"https://github.com/donnemartin/data-science-ipython-notebooks","issues":[{"issue":"Update the CNN notebook using the latest TensorFlow version","url":"https://github.com/donnemartin/data-science-ipython-notebooks/issues/83"},{"issue":"Ipython notebook","url":"https://github.com/donnemartin/data-science-ipython-notebooks/issues/82"},{"issue":"Python","url":"https://github.com/donnemartin/data-science-ipython-notebooks/issues/80"},{"issue":"alexnet.ipynb contains incomplete architecture of alexnet(2 cnn layers missing)","url":"https://github.com/donnemartin/data-science-ipython-notebooks/issues/64"},{"issue":"PyTorch tutorials","url":"https://github.com/donnemartin/data-science-ipython-notebooks/issues/61"}]}},"Spring Boot":{"spring-boot":{"url":"https://github.com/spring-projects/spring-boot","issues":[{"issue":"Add Server Push capability to custom actuator endpoints","url":"https://github.com/spring-projects/spring-boot/issues/26931"},{"issue":"JsonContentAssert extractors do not work with AssertJ 3.20.0","url":"https://github.com/spring-projects/spring-boot/issues/26922"},{"issue":"Add simple API to JacksonTester for direct instantiation","url":"https://github.com/spring-projects/spring-boot/issues/26906"},{"issue":"A bean factory post processor cannot be configured to run after DependsOnDatabaseInitializationPostProcessor","url":"https://github.com/spring-projects/spring-boot/issues/26899"},{"issue":"Autoconfiguration tries to create WebFluxSecurityConfiguration twice in integration tests","url":"https://github.com/spring-projects/spring-boot/issues/26897"}]},"mall":{"url":"https://github.com/macrozheng/mall","issues":[{"issue":"logstash安装插件报错","url":"https://github.com/macrozheng/mall/issues/490"},{"issue":"用docker启动logstash然后安装插件时提示以下信息.. 怎么解决..","url":"https://github.com/macrozheng/mall/issues/489"},{"issue":"日志切面类表达式无法识别包","url":"https://github.com/macrozheng/mall/issues/488"},{"issue":"关于mybatis生成器配置文件的问题","url":"https://github.com/macrozheng/mall/issues/486"},{"issue":"支持多租户嘛？","url":"https://github.com/macrozheng/mall/issues/485"}]},"spring-boot-examples":{"url":"https://github.com/ityouknow/spring-boot-examples","issues":[{"issue":"关于模块管理的小建议","url":"https://github.com/ityouknow/spring-boot-examples/issues/143"},{"issue":"pageable trong spring boot","url":"https://github.com/ityouknow/spring-boot-examples/issues/141"},{"issue":"Some questions","url":"https://github.com/ityouknow/spring-boot-examples/issues/133"},{"issue":"我就是来看看有没有人提issue，还有这是我人生中的第一个issue","url":"https://github.com/ityouknow/spring-boot-examples/issues/40"}]},"apollo":{"url":"https://github.com/ctripcorp/apollo","issues":[{"issue":"dev 与 pro环境，docker部署方式， 所有的写操作都落在pro的数据库上","url":"https://github.com/ctripcorp/apollo/issues/3761"},{"issue":"RemoteConfigLongPollService非常的耗时","url":"https://github.com/ctripcorp/apollo/issues/3760"},{"issue":"apollo-portal 1.8.2 接入 oidc 认证失败","url":"https://github.com/ctripcorp/apollo/issues/3756"},{"issue":"helm部署apollo1.8.2版本eureka访问502","url":"https://github.com/ctripcorp/apollo/issues/3752"},{"issue":"我们现在安装完遇到个问题，几个环境的配置修改后是一起变的，不是应该每个环境的配置都是独立的码","url":"https://github.com/ctripcorp/apollo/issues/3750"}]},"jeecg-boot":{"url":"https://github.com/zhangdaiscott/jeecg-boot","issues":[{"issue":"2.4.5，online 文件控件上传带汉字文件报错","url":"https://github.com/zhangdaiscott/jeecg-boot/issues/2667"},{"issue":"2.4.5前台定时任务无法翻页","url":"https://github.com/zhangdaiscott/jeecg-boot/issues/2666"},{"issue":"添加spring native的支持","url":"https://github.com/zhangdaiscott/jeecg-boot/issues/2664"},{"issue":"积木报表的主子表在主表没有数据的情况下页面会出错","url":"https://github.com/zhangdaiscott/jeecg-boot/issues/2660"},{"issue":"postgresql 模式问题","url":"https://github.com/zhangdaiscott/jeecg-boot/issues/2656"}]}},"Chrome extension":{"bypass-paywalls-chrome":{"url":"https://github.com/iamadamdev/bypass-paywalls-chrome","issues":[{"issue":"Not on Chrome Web Store?","url":"https://github.com/iamadamdev/bypass-paywalls-chrome/issues/1210"},{"issue":"Guide on Redirection","url":"https://github.com/iamadamdev/bypass-paywalls-chrome/issues/1208"},{"issue":"New site request: https://towardsdatascience.com","url":"https://github.com/iamadamdev/bypass-paywalls-chrome/issues/1206"},{"issue":"Crains chicagobusiness.com not working on Chrome","url":"https://github.com/iamadamdev/bypass-paywalls-chrome/issues/1205"},{"issue":"The Times (thetimes.co.uk) is not working","url":"https://github.com/iamadamdev/bypass-paywalls-chrome/issues/1201"}]},"refined-github":{"url":"https://github.com/sindresorhus/refined-github","issues":[{"issue":"Hide dependabot PR link-back noise","url":"https://github.com/sindresorhus/refined-github/issues/4480"},{"issue":"Does follow rename work ? ","url":"https://github.com/sindresorhus/refined-github/issues/4477"},{"issue":"default-branch-button creates incorrect URL if non-default branch has forward slash in name","url":"https://github.com/sindresorhus/refined-github/issues/4473"},{"issue":"hide-zero-packages never runs","url":"https://github.com/sindresorhus/refined-github/issues/4472"},{"issue":"In avoid-accidental-submissions, focus primary button instead of next field","url":"https://github.com/sindresorhus/refined-github/issues/4462"}]},"headless-recorder":{"url":"https://github.com/checkly/headless-recorder","issues":[{"issue":"Typing into date inputs types only on the yyyy section.","url":"https://github.com/checkly/headless-recorder/issues/100"},{"issue":"recording halts/crashes on some pages/interactions","url":"https://github.com/checkly/headless-recorder/issues/90"},{"issue":"Firefox support","url":"https://github.com/checkly/headless-recorder/issues/89"},{"issue":"Handle Assertions","url":"https://github.com/checkly/headless-recorder/issues/87"},{"issue":"Headless Recorder Roadmap & Survey Results","url":"https://github.com/checkly/headless-recorder/issues/83"}]},"codelf":{"url":"https://github.com/unbug/codelf","issues":[{"issue":"这并不支持中文搜索.....错误的","url":"https://github.com/unbug/codelf/issues/110"},{"issue":"添加 Rust 语言到选择列表","url":"https://github.com/unbug/codelf/issues/108"},{"issue":"有时候无法得到结果","url":"https://github.com/unbug/codelf/issues/106"},{"issue":"可以根据词频做个词云展示吗，这样对于大家用的多的能够一目了然。","url":"https://github.com/unbug/codelf/issues/105"},{"issue":"It must be use science net to visit this web","url":"https://github.com/unbug/codelf/issues/103"}]},"darkreader":{"url":"https://github.com/darkreader/darkreader","issues":[{"issue":"[Broken Website] Replace with title","url":"https://github.com/darkreader/darkreader/issues/6041"},{"issue":"Dark Reader does not work on Thunderbird when resist.fingerprinting is enabled","url":"https://github.com/darkreader/darkreader/issues/6035"},{"issue":"Turn Dark Reader into what's sussposed to be. ","url":"https://github.com/darkreader/darkreader/issues/6032"},{"issue":"[Feature Request] Recommended dark mode for the current site","url":"https://github.com/darkreader/darkreader/issues/6020"},{"issue":"[Broken Website] AWS Console","url":"https://github.com/darkreader/darkreader/issues/6019"}]}}}
+{
+    "Material design": {
+        "flutter": {
+            "url": "https://github.com/flutter/flutter",
+            "issues": [{
+                    "issue": "I have a problem with my Android Studio, when i try to run my app from Web",
+                    "url": "https://github.com/flutter/flutter/issues/84768"
+                },
+                {
+                    "issue": "Unable to build IOS version due to: Error: Getter not found: 'badge_outlined'.",
+                    "url": "https://github.com/flutter/flutter/issues/84764"
+                },
+                {
+                    "issue": "Text style background color on html render disappears",
+                    "url": "https://github.com/flutter/flutter/issues/84763"
+                },
+                {
+                    "issue": "[flutter_driver]: Proposal to add properties for drop down values",
+                    "url": "https://github.com/flutter/flutter/issues/84762"
+                },
+                {
+                    "issue": "Gradlew build faild with local auth 1.1.6",
+                    "url": "https://github.com/flutter/flutter/issues/84758"
+                }
+            ]
+        },
+        "material-ui": {
+            "url": "https://github.com/mui-org/material-ui",
+            "issues": [{
+                    "issue": "Render TreeView's TreeItems In a Flat List Of Nodes Instead Of Hierarchical Structure",
+                    "url": "https://github.com/mui-org/material-ui/issues/26802"
+                },
+                {
+                    "issue": "Slider customization (for a video trim bar)",
+                    "url": "https://github.com/mui-org/material-ui/issues/26800"
+                },
+                {
+                    "issue": "When changing only the time of a TimePicker using the keyboard, the date also changes to today's date. Version 5.0.0-alpha",
+                    "url": "https://github.com/mui-org/material-ui/issues/26799"
+                },
+                {
+                    "issue": "[Dialog] DialogTitle overrides DialogContent className",
+                    "url": "https://github.com/mui-org/material-ui/issues/26795"
+                },
+                {
+                    "issue": "[Select] Keyboard navigation does not work if the first child is a ListSubheader ",
+                    "url": "https://github.com/mui-org/material-ui/issues/26790"
+                }
+            ]
+        },
+        "ionic-framework": {
+            "url": "https://github.com/ionic-team/ionic-framework",
+            "issues": [{
+                    "issue": "bug: back and forward button does not display expected page",
+                    "url": "https://github.com/ionic-team/ionic-framework/issues/23454"
+                },
+                {
+                    "issue": "bug: routerDirection: 'none', routeAction: 'replace' causes page transition.",
+                    "url": "https://github.com/ionic-team/ionic-framework/issues/23453"
+                },
+                {
+                    "issue": "feat: add API for programmatic navigation with ionRouter in ionic vue",
+                    "url": "https://github.com/ionic-team/ionic-framework/issues/23450"
+                },
+                {
+                    "issue": "bug: angular ion-back-button pushes new entry to stack instead of popping",
+                    "url": "https://github.com/ionic-team/ionic-framework/issues/23448"
+                },
+                {
+                    "issue": "bug: --background-hover being overridden on ion-button fill=\"clear\" and color",
+                    "url": "https://github.com/ionic-team/ionic-framework/issues/23441"
+                }
+            ]
+        },
+        "material-design-icons": {
+            "url": "https://github.com/google/material-design-icons",
+            "issues": [{
+                    "issue": "How to use Rounded fromnpm install material-design-icons",
+                    "url": "https://github.com/google/material-design-icons/issues/1187"
+                },
+                {
+                    "issue": "Res",
+                    "url": "https://github.com/google/material-design-icons/issues/1186"
+                },
+                {
+                    "issue": "sensors icon doesn't exist in flutter",
+                    "url": "https://github.com/google/material-design-icons/issues/1185"
+                },
+                {
+                    "issue": "Icons",
+                    "url": "https://github.com/google/material-design-icons/issues/1184"
+                },
+                {
+                    "issue": "Icon",
+                    "url": "https://github.com/google/material-design-icons/issues/1183"
+                }
+            ]
+        },
+        "materialize": {
+            "url": "https://github.com/Dogfalo/materialize",
+            "issues": [{
+                    "issue": "is there a way custom checkbox color without sass?",
+                    "url": "https://github.com/Dogfalo/materialize/issues/6645"
+                },
+                {
+                    "issue": "Autocomplete arrow selection disappearing",
+                    "url": "https://github.com/Dogfalo/materialize/issues/6644"
+                },
+                {
+                    "issue": "Materialize drop down popup location changed",
+                    "url": "https://github.com/Dogfalo/materialize/issues/6642"
+                },
+                {
+                    "issue": "Making an extended floating action button",
+                    "url": "https://github.com/Dogfalo/materialize/issues/6641"
+                },
+                {
+                    "issue": "noUISlider breaks on mobile when used with materialize",
+                    "url": "https://github.com/Dogfalo/materialize/issues/6640"
+                }
+            ]
+        }
+    },
+    "Sass": {
+        "bootstrap": {
+            "url": "https://github.com/twbs/bootstrap",
+            "issues": [{
+                    "issue": "Floating Labels issue, and how to fix it (BS 5.0.1)",
+                    "url": "https://github.com/twbs/bootstrap/issues/34275"
+                },
+                {
+                    "issue": "Modal window not displaying",
+                    "url": "https://github.com/twbs/bootstrap/issues/34268"
+                },
+                {
+                    "issue": "B5 - modal not open on $('#myModal').show();",
+                    "url": "https://github.com/twbs/bootstrap/issues/34267"
+                },
+                {
+                    "issue": "Make our bundle SSR friendly",
+                    "url": "https://github.com/twbs/bootstrap/issues/34265"
+                },
+                {
+                    "issue": "Build plugins: read the \"imports\" during the build",
+                    "url": "https://github.com/twbs/bootstrap/issues/34248"
+                }
+            ]
+        },
+        "vue2-elm": {
+            "url": "https://github.com/bailicangdu/vue2-elm",
+            "issues": [{
+                    "issue": "npm install 会报错，是还需要什么东西吗",
+                    "url": "https://github.com/bailicangdu/vue2-elm/issues/597"
+                },
+                {
+                    "issue": "大佬，请问一下这个前端项目的代理是怎么搞得，运行npm run local和后台了，但是发现有些接口走的不是后台的服务，例如：/shopping/restaurants?latitude=22.54286&longitude=114.059563&offset=0&limit=20这个接口",
+                    "url": "https://github.com/bailicangdu/vue2-elm/issues/595"
+                },
+                {
+                    "issue": "怎么修改代理",
+                    "url": "https://github.com/bailicangdu/vue2-elm/issues/591"
+                },
+                {
+                    "issue": "为什么build和config中的文件和vue-cli默认创建的不一样？",
+                    "url": "https://github.com/bailicangdu/vue2-elm/issues/586"
+                },
+                {
+                    "issue": "为什么验证码显示不出来？",
+                    "url": "https://github.com/bailicangdu/vue2-elm/issues/585"
+                }
+            ]
+        },
+        "Hover": {
+            "url": "https://github.com/IanLunn/Hover",
+            "issues": [{
+                    "issue": "Border Radius Issue",
+                    "url": "https://github.com/IanLunn/Hover/issues/160"
+                },
+                {
+                    "issue": "Split CSS files to make it possible to pick up individual effects [AMP Support]",
+                    "url": "https://github.com/IanLunn/Hover/issues/143"
+                },
+                {
+                    "issue": "some transitions don't work (well) in IE and Edge",
+                    "url": "https://github.com/IanLunn/Hover/issues/137"
+                },
+                {
+                    "issue": "stay at the animated state",
+                    "url": "https://github.com/IanLunn/Hover/issues/135"
+                },
+                {
+                    "issue": "Please add .active class to animate element without hovering",
+                    "url": "https://github.com/IanLunn/Hover/issues/132"
+                }
+            ]
+        },
+        "tabler": {
+            "url": "https://github.com/tabler/tabler",
+            "issues": [{
+                    "issue": "[FEATURE] & BUG in select suggestion - bootstrap select implemetation",
+                    "url": "https://github.com/tabler/tabler/issues/861"
+                },
+                {
+                    "issue": "[FEATURE] - Add page-wrapper CSS for fixing footer position",
+                    "url": "https://github.com/tabler/tabler/issues/859"
+                },
+                {
+                    "issue": "[BUG] NPM Package @tabler/core version does not match latest release",
+                    "url": "https://github.com/tabler/tabler/issues/858"
+                },
+                {
+                    "issue": "npm install npm ERR! gyp ERR! cwd /var/www/tabler/node_modules/node-sass",
+                    "url": "https://github.com/tabler/tabler/issues/854"
+                },
+                {
+                    "issue": "[BUG] Menu with sub menu does not open",
+                    "url": "https://github.com/tabler/tabler/issues/852"
+                }
+            ]
+        },
+        "ngx-admin": {
+            "url": "https://github.com/akveo/ngx-admin",
+            "issues": [{
+                    "issue": "Login Error, RangeError: Maximum call stack size exceeded on Chrome",
+                    "url": "https://github.com/akveo/ngx-admin/issues/5857"
+                },
+                {
+                    "issue": "Update to Angular 12",
+                    "url": "https://github.com/akveo/ngx-admin/issues/5855"
+                },
+                {
+                    "issue": "Don't work map modules in Demo and git-repos",
+                    "url": "https://github.com/akveo/ngx-admin/issues/5853"
+                },
+                {
+                    "issue": "NbAuthService refreshToken() not firing onTokenChange()",
+                    "url": "https://github.com/akveo/ngx-admin/issues/5852"
+                },
+                {
+                    "issue": "Lazy loading",
+                    "url": "https://github.com/akveo/ngx-admin/issues/5851"
+                }
+            ]
+        }
+    },
+    "Nim": {
+        "Nim": {
+            "url": "https://github.com/nim-lang/Nim",
+            "issues": [{
+                    "issue": "string collected to early with --gc:arc",
+                    "url": "https://github.com/nim-lang/Nim/issues/18287"
+                },
+                {
+                    "issue": "int32 should be int in log2Impl in math.nim",
+                    "url": "https://github.com/nim-lang/Nim/issues/18284"
+                },
+                {
+                    "issue": "static param in macro crashes nim and with no error shown (nim gags internalAssert errors!)",
+                    "url": "https://github.com/nim-lang/Nim/issues/18278"
+                },
+                {
+                    "issue": "nimscript sigmatch error with static param",
+                    "url": "https://github.com/nim-lang/Nim/issues/18275"
+                },
+                {
+                    "issue": "echoLock in system/io.nim is not released when shared library is unloaded",
+                    "url": "https://github.com/nim-lang/Nim/issues/18271"
+                }
+            ]
+        },
+        "nitter": {
+            "url": "https://github.com/zedeus/nitter",
+            "issues": [{
+                    "issue": "An error has occured in one of your routes.",
+                    "url": "https://github.com/zedeus/nitter/issues/400"
+                },
+                {
+                    "issue": "nitter docker arm64 tested on RPI4",
+                    "url": "https://github.com/zedeus/nitter/issues/399"
+                },
+                {
+                    "issue": "Videos no longer working",
+                    "url": "https://github.com/zedeus/nitter/issues/395"
+                },
+                {
+                    "issue": "IBM always screws up whatever site hosting",
+                    "url": "https://github.com/zedeus/nitter/issues/393"
+                },
+                {
+                    "issue": "Expired SSL cert on nitter.net & cert mismatch on nitter.net",
+                    "url": "https://github.com/zedeus/nitter/issues/392"
+                }
+            ]
+        },
+        "glad": {
+            "url": "https://github.com/Dav1dde/glad",
+            "issues": [{
+                    "issue": "Multiple definitions for D",
+                    "url": "https://github.com/Dav1dde/glad/issues/317"
+                },
+                {
+                    "issue": "Zig Generator",
+                    "url": "https://github.com/Dav1dde/glad/issues/307"
+                },
+                {
+                    "issue": "Dealing with Languages I cannot properly maintain in glad2",
+                    "url": "https://github.com/Dav1dde/glad/issues/302"
+                },
+                {
+                    "issue": "Inclusion guards for OpenGL ES headers",
+                    "url": "https://github.com/Dav1dde/glad/issues/273"
+                },
+                {
+                    "issue": "Multicontext documentation ambiguity and possible bug?",
+                    "url": "https://github.com/Dav1dde/glad/issues/259"
+                }
+            ]
+        },
+        "nimble": {
+            "url": "https://github.com/nim-lang/nimble",
+            "issues": [{
+                    "issue": "Linking into nimbledeps/pkgs does not work",
+                    "url": "https://github.com/nim-lang/nimble/issues/922"
+                },
+                {
+                    "issue": "Support OS-provided Nim libraries",
+                    "url": "https://github.com/nim-lang/nimble/issues/921"
+                },
+                {
+                    "issue": "[feature] nimble info pkg -> lists pkg versions installed",
+                    "url": "https://github.com/nim-lang/nimble/issues/919"
+                },
+                {
+                    "issue": "Nimble package with external shared library",
+                    "url": "https://github.com/nim-lang/nimble/issues/918"
+                },
+                {
+                    "issue": "thisDir != projectDir as of Nimble 0.13.0.",
+                    "url": "https://github.com/nim-lang/nimble/issues/917"
+                }
+            ]
+        },
+        "Arraymancer": {
+            "url": "https://github.com/mratsim/Arraymancer",
+            "issues": [{
+                    "issue": "Incorrect Result: Mutation with a tensor or tensor slice",
+                    "url": "https://github.com/mratsim/Arraymancer/issues/506"
+                },
+                {
+                    "issue": "make arraymancer work with devel",
+                    "url": "https://github.com/mratsim/Arraymancer/issues/505"
+                },
+                {
+                    "issue": "Operations not traced on minimal example",
+                    "url": "https://github.com/mratsim/Arraymancer/issues/502"
+                },
+                {
+                    "issue": "Two (small) issues with display of tensor",
+                    "url": "https://github.com/mratsim/Arraymancer/issues/500"
+                },
+                {
+                    "issue": "QR decomposition test, sign issue",
+                    "url": "https://github.com/mratsim/Arraymancer/issues/494"
+                }
+            ]
+        }
+    }
+}
