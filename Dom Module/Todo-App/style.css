@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    background-color: white;
+}
+
+input {
+    width: 50%;
+    height: 6vh;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+button {
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.2rem;
+    width: 10%;
+    height: 6vh;
+}
+
+li {
+    font-family: 'Mulish', sans-serif;
+    color: green;
+    list-style: none;
+    font-size: 1.4rem;
+}

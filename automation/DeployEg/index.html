@@ -1,52 +1,33 @@
 <html>
 
 <head>
-    <title>Simple hello world</title>
-    <style>
-        .prompt {
-            font-size: 16px;
-            color: brown;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .container {
-            width: 50%;
-        }
-        
-        .left-pane {
-            width: 50%;
-            float: left;
-        }
-        
-        .right-pane {
-            width: 50%;
-            float: right;
-        }
-        
-        .submit-name {
-            clear: both;
-        }
-    </style>
+    <title>Simple login</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            var user, pass;
+            $("#submit").click(function() {
+                user = $("#user").val();
+                pass = $("#password").val();
+                $.post("http://localhost:3000/login", {
+                    user: user,
+                    password: pass
+                }, function(data) {
+                    if (data === 'yes') {
+                        alert("login success");
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
-    <h1>Hello Node JS</h1>
-
-    <form method='GET' action="/getemail">
-        <div class="container">
-            <div class="prompt left-pane">
-                <span>Give us your firstname and get email address</span>
-            </div>
-            <div class="right-pane">
-                <input type="text" id="firstname" name="firstname" />
-            </div>
-        </div>
-        <div class="submit-name">
-            <input type="submit" value="get the email" />
-        </div>
-        </div>
-    </form>
+    <h1>Hello people !</h1>
+    <input type="TEXT" id="user" size="40"><br>
+    <input type="password" id="password" size="40"><br>
+    <input type="button" id="submit" value="Submit">
 </body>
 
 </html>

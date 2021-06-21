@@ -1,0 +1,20 @@
+body {
+    background-color: azure;
+}
+
+h1 {
+    color: green;
+}
+
+img {
+    width: 25%;
+    height: 25%;
+}
+
+h2 {
+    color: blue;
+}
+
+p {
+    text-align: justify;
+}
