@@ -18,6 +18,9 @@ body {
 
 .grid {
     height: 85vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .filters,
@@ -171,6 +174,7 @@ body {
     width: 20rem;
     border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
 }
 
 .ticket-color {

@@ -1,7 +1,9 @@
 let addBtn = document.querySelector(".add");
 let body = document.querySelector("body");
-
 let grid = document.querySelector(".grid")
+
+// priorities
+let colors = ["pink", "blue", "green", "black"];
 
 addBtn.addEventListener("click", function() {
     let preModal = document.querySelector(".modal");
@@ -42,22 +44,38 @@ addBtn.addEventListener("click", function() {
 
     let taskInnerContainer = div.querySelector(".task-inner-container");
 
-    taskInnerContainer.addEventListener("keypress", function(e) {
-        if (e.key == "Enter") {
+    taskInnerContainer.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
             let ticketDiv = document.createElement("div");
             ticketDiv.classList.add("ticket");
 
             // adding the ticket color
-            ticketDiv.innerHTML = ` <div class="ticket-color ${ticketColor}"></div>
-        <div class="ticket-id">
-          #aeD34
-        </div>
-        <div class="actual-task">
-          ${e.currentTarget.innerText}
-        </div>`;
+            ticketDiv.innerHTML = ` 
+            <div class="ticket-color ${ticketColor}"></div>
+            <div class="ticket-id">
+            #aeD34
+            </div>
+            <div class="actual-task">
+            ${e.currentTarget.innerText}
+            </div>`;
 
+            // when we click ticket color, then it changes, ie priority changes
+
+            let ticketColorDiv = ticketDiv.querySelector('.ticket-color');
+            ticketColorDiv.addEventListener('click', (e) => {
+                let currentColor = e.currentTarget.classList[1];
+                let colorIndex = 0; // initiallay
+
+                colorIndex = colors.indexOf(currentColor);
+                colorIndex = (colorIndex + 1) % colors.length;
+                console.log(colors[colorIndex]);
+                ticketColorDiv.classList.replace(currentColor, colors[colorIndex]);
+            });
             grid.append(ticketDiv)
 
+            div.remove();
+        } else if (e.key === 'Escape') {
+            console.log(e.key);
             div.remove();
         }
     });
