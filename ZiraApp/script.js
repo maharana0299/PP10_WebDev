@@ -3,7 +3,7 @@ let body = document.querySelector("body");
 let grid = document.querySelector(".grid")
 
 // priorities
-let colors = ["pink", "blue", "green", "black"];
+let colors = ["pink", "blue", "green", 'purple', "black"];
 
 addBtn.addEventListener("click", function() {
     let preModal = document.querySelector(".modal");
@@ -15,15 +15,17 @@ addBtn.addEventListener("click", function() {
     div.classList.add("modal"); //<div class="modal"></div>
 
     div.innerHTML = ` <div class="task-section">
-  <div class="task-inner-container" contenteditable="true"></div>
+    <div class="task-inner-container" contenteditable="true"></div>
 </div>
 <div class="modal-priority-section">
-  <div class="priority-inner-container">
-    <div class="modal-priority pink"></div>
-    <div class="modal-priority blue"></div>
-    <div class="modal-priority green"></div>
-    <div class="modal-priority black selected"></div>
-  </div>
+    <div class="priority-inner-container">
+        <div class="modal-priority pink"></div>
+        <div class="modal-priority blue"></div>
+        <div class="modal-priority green"></div>
+        <div class="modal-priority purple"></div>
+        <div class="modal-priority black"></div>
+
+    </div>
 </div>`;
 
     let ticketColor = "black";
