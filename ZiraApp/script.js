@@ -5,7 +5,38 @@ let deleteButton = document.querySelector('.delete');
 let key = 'ALLTICKETS';
 let deleteMode = false; // initally
 
+let isFilterSelected = false;
+let previouslySelected;
+// priorities
+let colors = ["pink", "blue", "green", 'purple', "black"];
 
+let allFiterChildren = document.querySelectorAll('.filter div');
+
+for (let i = 0; i < allFiterChildren.length; i++) {
+    allFiterChildren[i].addEventListener('click', (e) => {
+
+        if (previouslySelected == i) {
+            previouslySelected = undefined;
+            isFilterSelected = false;
+            loadTasks();
+            allFiterChildren[i].parentElement.classList.remove('filter-selected')
+            return;
+        }
+
+        if (previouslySelected != undefined) {
+            console.log(previouslySelected);
+            allFiterChildren[previouslySelected].parentElement.classList.remove('filter-selected');
+        }
+
+        let filterColor = e.currentTarget.classList[0];
+
+        isFilterSelected = true;
+        loadTasks(filterColor);
+        previouslySelected = i;
+        allFiterChildren[i].parentElement.classList.add('filter-selected');
+
+    })
+}
 if (!(localStorage.getItem(key))) {
     // if data is present them we need to load it
 
@@ -14,17 +45,20 @@ if (!(localStorage.getItem(key))) {
     localStorage.setItem(key, allTickets);
 }
 
+
+loadTasks();
+
+
 deleteButton.addEventListener('click', (e) => {
-        if (e.currentTarget.classList.contains('delete-selected')) {
-            e.currentTarget.classList.remove('delete-selected');
-            deleteMode = false;
-        } else {
-            e.currentTarget.classList.add('delete-selected');
-            deleteMode = true;
-        }
-    })
-    // priorities
-let colors = ["pink", "blue", "green", 'purple', "black"];
+    if (e.currentTarget.classList.contains('delete-selected')) {
+        e.currentTarget.classList.remove('delete-selected');
+        deleteMode = false;
+    } else {
+        e.currentTarget.classList.add('delete-selected');
+        deleteMode = true;
+    }
+});
+
 
 addBtn.addEventListener("click", function() {
 
@@ -155,7 +189,7 @@ addBtn.addEventListener("click", function() {
                 }
             });
 
-            grid.append(ticketDiv)
+            grid.append(ticketDiv);
 
             div.remove();
 
@@ -169,6 +203,95 @@ addBtn.addEventListener("click", function() {
     body.append(div);
 });
 
+
+function loadTasks(color) {
+
+    let ticketsOnUI = document.querySelectorAll('.ticket');
+
+    for (let i = 0; i < ticketsOnUI.length; i++) {
+        ticketsOnUI[i].remove();
+    }
+
+    let allTickets = JSON.parse(localStorage.getItem(key));
+
+    // make ui for tickets
+
+    for (tId in allTickets) {
+
+        let ticket = allTickets[tId];
+
+        if (color && color != ticket.color) {
+            continue;
+        }
+        let ticketDiv = document.createElement("div");
+        ticketDiv.classList.add("ticket");
+
+        ticketDiv.setAttribute('data-id', tId);
+        // adding the ticket color
+        ticketDiv.innerHTML = ` 
+            <div data-id = "${tId}" class="ticket-color ${ticket.color}"></div>
+            <div class="ticket-id">
+            #${tId}
+            </div>
+            <div class="actual-task" contenteditable="true">
+            ${ticket.taskValue}
+            </div>`;
+
+
+        // add listeners
+        let ticketColorDiv = ticketDiv.querySelector('.ticket-color');
+        let acutalTaskDiv = ticketDiv.querySelector('.actual-task');
+
+        acutalTaskDiv.addEventListener('input', (e) => {
+            let newValue = (e.currentTarget.innerText);
+
+            let allTickets = JSON.parse(localStorage.getItem(key));
+            allTickets[tId].taskValue = newValue;
+            localStorage.setItem(key, JSON.stringify(allTickets));
+
+        });
+
+
+        ticketColorDiv.addEventListener('click', (e) => {
+
+
+            let curretntTicketId = e.currentTarget.getAttribute("data-id");
+
+            let currentColor = e.currentTarget.classList[1];
+            let colorIndex = 0; // initiallay
+
+            colorIndex = colors.indexOf(currentColor);
+            colorIndex = (colorIndex + 1) % colors.length;
+            console.log(colors[colorIndex]);
+
+            // 1- all tickets ; 2- update ; 3- save
+            let allTickets = JSON.parse(localStorage.getItem(key));
+            allTickets[curretntTicketId].color = colors[colorIndex];
+            localStorage.setItem(key, JSON.stringify(allTickets));
+
+            ticketColorDiv.classList.replace(currentColor, colors[colorIndex]);
+        });
+
+        // for deleting 
+        ticketDiv.addEventListener('click', (e) => {
+            if (deleteMode) {
+
+                let ticketId = e.currentTarget.getAttribute('data-id');
+
+                // fetch and delete from local storage
+                let allTickets = JSON.parse(localStorage.getItem(key));
+                delete allTickets[ticketId];
+                localStorage.setItem(key, JSON.stringify(allTickets));
+
+                e.currentTarget.remove();
+            }
+        });
+
+        grid.append(ticketDiv);
+
+    }
+
+}
 
 // let obj = {
 //     color: "color",
