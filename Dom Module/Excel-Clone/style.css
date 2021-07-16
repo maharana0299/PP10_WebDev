@@ -9,7 +9,6 @@ body {
 
 .container {
     height: 100vh;
-    background-color: #f5f6fa;
     /* border: 1px solid black; */
 }
 
@@ -48,6 +47,7 @@ body {
     height: 4%;
     border-bottom: 1px solid black;
     display: flex;
+    background: white;
 }
 
 .formula-section .selected-cell-div {
@@ -94,6 +94,8 @@ body {
     display: inline-block;
     position: fixed;
     top: calc(20vh + 30px);
+    background-color: #f5f6fa;
+    z-index: -10;
 }
 
 .row-number {
@@ -115,6 +117,7 @@ body {
     left: 30px;
     display: flex;
     flex-shrink: 0;
+    background-color: #f5f6fa;
 }
 
 .column-tag {

@@ -1,9 +1,11 @@
 let rowNumberSection = document.querySelector('.row-number-section');
 let coulumnTagSection = document.querySelector('.column-tag-section');
 let formulaBarSelectedCellArea = document.querySelector('.selected-cell-div')
+let cellSection = document.querySelector('.cell-section');
 
 // last visited cell
 let lastVisitedCell;
+
 
 for (let i = 1; i <= 100; i++) {
     let div = document.createElement('div');
@@ -23,9 +25,15 @@ for (let i = 0; i < 26; i++) {
 }
 
 
-// for grid elements 
+// cell section
 
-let cellSection = document.querySelector('.cell-section');
+cellSection.addEventListener("scroll", (e) => {
+    console.log(e.currentTarget.scrollLeft);
+    coulumnTagSection.style.transform = `translateX(-${e.currentTarget.scrollLeft}px)`
+    rowNumberSection.style.transform = `translateY(-${e.currentTarget.scrollTop}px)`
+});
+
+// for grid elements 
 
 for (let i = 1; i <= 100; i++) {
 
@@ -48,7 +56,7 @@ for (let i = 1; i <= 100; i++) {
 
         cell.addEventListener('click', (e) => {
 
-            if (lastVisitedCell) {
+            if (lastVisitedCell && lastVisitedCell != e.currentTarget) {
                 lastVisitedCell.classList.remove("cell-selected");
             }
 
@@ -58,6 +66,8 @@ for (let i = 1; i <= 100; i++) {
 
             let currentCellAddress = e.currentTarget.getAttribute("data-address");
             formulaBarSelectedCellArea.innerText = `${currentCellAddress}`;
+
+
         });
 
         // finally appeding
@@ -65,4 +75,14 @@ for (let i = 1; i <= 100; i++) {
     }
     console.log('adding');
     cellSection.append(rowDiv);
+}
+
+class Cell {
+    value = 0;
+    constructor(value, formula = "") {
+        this.value = value;
+        this.formula = formula;
+        this.upstream = [];
+        this.downstream = [];
+    }
 }
