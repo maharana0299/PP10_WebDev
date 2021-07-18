@@ -6,6 +6,7 @@ let cellSection = document.querySelector('.cell-section');
 // last visited cell
 let lastVisitedCell;
 
+let dataObject = {}
 
 for (let i = 1; i <= 100; i++) {
     let div = document.createElement('div');
@@ -15,7 +16,7 @@ for (let i = 1; i <= 100; i++) {
     rowNumberSection.append(div);
 }
 
-// Add columns
+// Add columns ie 26 headings
 for (let i = 0; i < 26; i++) {
     let div = document.createElement('div');
     div.classList.add("column-tag")
@@ -25,8 +26,7 @@ for (let i = 0; i < 26; i++) {
 }
 
 
-// cell section
-
+// cell section make it scroll
 cellSection.addEventListener("scroll", (e) => {
     console.log(e.currentTarget.scrollLeft);
     coulumnTagSection.style.transform = `translateX(-${e.currentTarget.scrollLeft}px)`
@@ -34,7 +34,7 @@ cellSection.addEventListener("scroll", (e) => {
 });
 
 // for grid elements 
-
+// we are creating individual cell + UI
 for (let i = 1; i <= 100; i++) {
 
     let rowDiv = document.createElement('div');
@@ -47,18 +47,39 @@ for (let i = 1; i <= 100; i++) {
         // eg : A1, A2, B6 etc
         let cellAddress = alpha + i;
 
+        // object 
+        dataObject[cellAddress] = {
+            value: undefined,
+            formula: undefined,
+            upsream: [],
+            downstream: [],
+        };
+
         let cell = document.createElement('div');
         cell.classList.add('cell');
         cell.setAttribute('data-address', cellAddress);
-
         // to edit 
         cell.contentEditable = true;
+
+        // Whenever we do changes, it updates
+        cell.addEventListener("input", (e) => {
+
+            // get address of cell 
+            let currentCellAddress = e.currentTarget.getAttribute('data-address')
+            let currentCellObject = dataObject[currentCellAddress];
+
+            // console.log(e.currentTarget.innerText);
+            // change the value 
+            currentCellObject.value = e.currentTarget.innerText;
+            console.log(currentCellObject);
+        })
 
         cell.addEventListener('click', (e) => {
 
             if (lastVisitedCell && lastVisitedCell != e.currentTarget) {
                 lastVisitedCell.classList.remove("cell-selected");
             }
+
 
             e.currentTarget.classList.add('cell-selected');
 
@@ -67,7 +88,6 @@ for (let i = 1; i <= 100; i++) {
             let currentCellAddress = e.currentTarget.getAttribute("data-address");
             formulaBarSelectedCellArea.innerText = `${currentCellAddress}`;
 
-
         });
 
         // finally appeding
@@ -75,14 +95,4 @@ for (let i = 1; i <= 100; i++) {
     }
     console.log('adding');
     cellSection.append(rowDiv);
-}
-
-class Cell {
-    value = 0;
-    constructor(value, formula = "") {
-        this.value = value;
-        this.formula = formula;
-        this.upstream = [];
-        this.downstream = [];
-    }
 }
